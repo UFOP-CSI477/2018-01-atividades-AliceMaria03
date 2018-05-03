@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="./form.js"></script>
+	<title>Cáculo do IMC</title>
+	<script>
+		function validar(campo,grupo,alerta){
+			return 1;
+		}
+		function calcular(){
+			var peso= parseDouble(document.dados.valor1.value);
+			var altura= parseDouble(document.dados.valor2.value);
+			if(!validar(document.dados.valor1,"grupoV1","alertaV1")){
+				return;
+			}
+			validar(document.dados.valor2,"grupoV2","alertaV2");
+			if(document.dados.valor1.value.length==0 || isNaN(peso)){
+				document.getElementById("alertaV1").style.display="block";
+				document.getElementById("grupoV1").classList.add("has-error");
+          document.dados.valor1.value = "";
+          document.dados.valor1.focus();
+          return;
+        }
+		document.getElementById("grupoV1").classList.remove("has-error");
+        document.getElementById("alertaV1").style.display = "none";
+        if ( document.dados.valor2.value.length == 0 || isNaN(altura) ) {
+          window.alert("Preencha a altura corretamente!");
+          document.dados.valor2.value = "";
+          document.dados.valor2.focus();
+          return;
+        }
+        var res = (peso / (altura*altura));
+        var pesoideal = (res*(altura*altura));
+        document.dados.res.value = res;
+        document.dados.pesoideal.value= pesoideal;
+		}	
+		
+
+
+			
+
+	</script>
+</head>
+<body>
+
+<table class="table table-bordered table-striped table-hover table-condensed">
+<caption>IMC</caption>
+<thead>
+	<tr class="success">
+		
+		<th>IMC</th>
+		<th>Classificação</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		
+		<td>Abaixo de 18,5</td>
+		<td>Subnutrição</td>
+	</tr>
+	<tr class="success">
+		
+		<td>Entre 18,5 e 24,9</td>
+		<td>Peso Saudável</td>
+		
+	</tr>
+	<tr>
+		
+		<td>Entre 25,0 e 29,9</td>
+		<td>Sobrepeso</td>
+		
+	</tr>
+
+	<tr class="success">
+		<td>Entre 30,0 e 34,9</td>
+		<td>Obesidade grau 1</td>
+		
+	</tr>
+	<tr>
+		<td>Entre 35,0 e 39,9</td>
+		<td>Obesidade grau 2</td>
+		
+	</tr>
+	<tr class="success">
+		<td>Acima de 40</td>
+		<td>Obesidade grau 3</td>
+		
+	</tr>
+
+	</tbody>
+	
+</table>
+<form name="dados">
+		<div class="form-group" id="grupoV1">
+			<label for= "valor1"> Insira o peso:</label>
+			<input  type="text"  name="valor1" class="form-control">
+		</div>	
+		<div class="alert alert-danger" style="display: none" id="alertaV1">
+			<p> Informe o peso corretamente</p>
+		</div>	
+			<div class="form-group" id="grupoV2">
+			<label for= "valor2"> Insira a altura</label>
+			<input type="text" name="valor2" class="form-control">
+			<div class="alert alert-danger" style="display: none" id="alertaV2">
+				Informe sua altura corretamente
+			</div>
+		</div>
+		<div class="form-group" id="grupoRes">
+        <label for="res">Resultado</label>
+
+        <input type="text" name="res" disabled class="form-control">
+      </div>
+      <div class="form-group" id="grupoIdeal">
+        <label for="pesoideal">Peso Ideal</label>
+
+        <input type="text" name="pesoideal" disabled class="form-control">
+      </div>
+
+<button type="button"  name="calcular" onclick="calcular()" class="btn btn-primary">Calcular IMC </button>
+
+
+</form>
+
+</body> 
+	
+
+
+
+</html>

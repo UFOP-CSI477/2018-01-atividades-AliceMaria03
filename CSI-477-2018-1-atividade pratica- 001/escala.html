@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Escala</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+	<script>
+		
+		function magnitude(){
+			var a= window.prompt("Insira a amplitude:");
+			var tempo= window.prompt("Insira o intervalo de tempo:");
+			var res= Math.log10(a) + 3*Math.log10(8*tempo) - 2.92;
+			window.alert("A Magnitude do terremoto é:" + res);
+		}
+	</script>
+</head>
+<body>
+<table class="table table-bordered table-striped table-hover table-condensed">
+<caption>Escala Richter</caption>
+<thead>
+	<tr class="danger">
+		
+		<th>Magnitude Ritcher</th>
+		<th>Efeitos</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		
+		<td>Menor que 3,5</td>
+		<td>Geralmente não sentido, mas gravado</td>
+	</tr>
+	<tr class="danger">
+		
+		<td>Entre 3,5 e 5,4</td>
+		<td>Ás vezes sentido, mas raramente causa danos</td>
+		
+	</tr>
+	<tr>
+		
+		<td>Entre 5,5 e 6,0</td>
+		<td>No máximo causa pequenos danos a prédios bem construídos, mas pode
+		danificar seriamente casas mal construídas em regiões próximas</td>
+		
+	</tr>
+
+	<tr class="danger">
+		<td>Entre 6,1 e 6,9</td>
+		<td>Pode ser destrutivo em torno de até 100km do epicentro</td>
+		
+	</tr>
+	<tr>
+		<td>Entre 7,0 e 7,9</td>
+		<td>Grande terremoto. Pode causar sérios danos numa grande faixa</td>
+		
+	</tr>
+	<tr class="danger">
+		<td>Entre 8,0 ou mais</td>
+		<td>Enorme terremoto. Pode causar graves danos em muitas áreas mesmo que estejam centenas de quilômetros</td>
+		
+	</tr>
+	</tbody>
+	
+</table>
+<p id="resultado">Magnitude M:</p>
+	<button type="button" onclick="magnitude()">Calcular</button>
+</body>
+</html>
