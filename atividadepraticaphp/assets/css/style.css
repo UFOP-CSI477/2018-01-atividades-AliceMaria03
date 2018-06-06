@@ -1,0 +1,526 @@
+
+body{
+    padding-bottom:200px;
+   
+    position:relative; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+h4{
+    text-align: center;
+}
+
+
+
+/*
+ * Fontes
+ */
+
+
+@font-face {
+  font-family: "GalanoGrotesqueAltLight";
+  src: url('../fonts/GalanoGrotesqueAltLight.otf') format('opentype'); 
+}
+
+
+@font-face {
+  font-family: "GalanoGrotesque";
+  src: url('../fonts/GalanoGrotesque.otf') format('opentype'); 
+}
+
+
+h1 {
+    font-family: GalanoGrotesqueAltLight;
+}
+
+h2{
+    font-family: GalanoGrotesque;
+    font-size: 40px;
+    padding-bottom: 50px:;
+}
+
+.btncadastrar{
+     font-family: GalanoGrotesque;
+}
+
+#botao{
+    margin-top: 10%;
+    font-family: GalanoGrotesqueAltLight;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #526f99;
+    border-color: #526f99;
+    font-family: GalanoGrotesqueAltLight;
+}
+
+.form-control{
+    font-family: GalanoGrotesqueAltLight;
+}
+
+.container-fluid{
+    margin-top: 50px;
+}
+
+tr{
+    font-family: GalanoGrotesque;
+}
+
+
+#tabela{
+    padding-right: 10px;
+}
+
+/* header */
+
+#imgcabecalho{
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+#imgcabecalho{
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+
+}
+
+#menu{
+     background-color: #526f99;
+     border-color: #fff;
+     font-family: GalanoGrotesque;
+     font-size: 15px;
+}
+
+.icon-bar{
+        background-color: #fff !important;
+
+}
+/* #myNavbar{
+    border-color: transparent;
+} */
+#toggleButton{
+    border-color: #fff;
+}
+.imagem{
+    width: 50px;
+}
+.container img{
+    max-width: 100%;
+}
+
+ nav ul {
+
+   display: flex;
+   width: 100%;
+
+
+}
+
+ li {
+  flex-grow: 1;
+   white-space: pre-wrap;
+   overflow:hidden;
+   display: inline;
+
+}
+
+
+
+/*
+ * Modal
+ */
+
+.modal-header{
+    background-color: #617ea9; 
+    color: #fff;
+    font-family: GalanoGrotesque;
+
+}
+
+.modal-body{
+    font-family: GalanoGrotesqueAltLight;
+}
+
+
+/*
+ * Botões
+ */
+
+#btnenviar{
+    color: #fff
+    background-color: #6aa948;
+} 
+
+
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background-color: #286090;
+    border-color: #286090;
+}
+
+.align{
+    text-align: center;
+}
+
+/*
+ * Página de Início
+
+ * Página de Login
+ */
+
+.classLogin, .login{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(104, 145, 162), rgb(0,74,143));
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btnentrar {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.btnsenha{
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.imagemlogin {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    background-color: rgb(104, 145, 162);
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(0,74,143);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(0,74,143);
+}
+
+
+.btn.btn-senha {
+    background-color: rgb(104, 145, 162);
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+
+.btn.btn-senha:hover,
+.btn.btn-senha:active,
+.btn.btn-senha:focus {
+    background-color: rgb(0,74,143);
+}
+
+/*
+ * Final do Css da página de login
+ */
+
+
+
+
+
+.imgheader{
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    float: left;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+/* Página relação */
+
+.imagemcabecalho{
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+
+
+}
+
+#funcionario{
+    width: 150px;
+    height: 150px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100px;
+}
+
+
+
+
+/* Imagem página relação */
+
+
+.user {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+}
+
+.user img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Nome funcionário */
+.informacoes p{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: GalanoGrotesque;
+}
+
+
+/*
+ * CSS Header
+ */
+/*
+  #imgcabecalho{
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
+
+#menu{
+     background-color: #526f99;
+}
+.imagem{
+    width: 80px;
+}*/
+
+
+
+
+
+
+/*
+* Footer
+*/
+
+
+
+
+#footer{
+    background-color: #526f99;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    right:0;   
+    left:0;
+    font-family: GalanoGrotesqueAltLight;
+    position: absolute; 
+   
+
+}
+#logovisao{
+    height:15px ;
+}
+
+#footer p{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #F5F5F5;
+   
+    padding-top: 5px;
+
+ }
+
+
+
+ /*
+ * CSS Página Relatório
+ */
+
+ .relatorio a:focus, a:hover{
+    color: #526F99;
+ }
+
+
+ 
+/*
+ * Página inicio
+ */
+
+
+
+#inicio{
+    padding-top: 70px;
+}
