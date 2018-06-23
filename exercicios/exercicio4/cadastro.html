@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>Cadastro de Alunos</title>
+	<link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+	<h1>Dados do Cadastro</h1>
+	<form method="post" action="validar.html"><!--  metodo get é submetido diretamente na url metodo POST encapsula os dados e não tem limite da quantidade de informações -->
+		<label for="nome">Nome</label>
+		<input type="text" name="nome" placeholder="Nome da pessoa">
+
+		<label for="endereco">Endereço</label>
+		<input type="text" name="endereco">
+
+		<label for="telefone">Telefone</label>
+		<input type="number" name="telefone">
+
+		<label for="cpf">CPF</label>
+		<input type="number" name="cpf" maxlength="11" placeholder="Utilize o formato 999.999.999-99"><br>
+		<br>
+		<label for="telefone">Email</label>
+		<input type="text" name="email">
+		<br>
+		<label for="genero">Gênero</label><br>
+
+		
+		<input type="radio" name="genero" id="feminino" value="F">Feminino<br>
+
+		
+		<input type="radio" name="genero" id="masculino" value="M">Masculino<br>
+
+		
+		<input type="radio" name="genero" value="NB">Não Binario<br>
+
+		<label for="area">Areas de interesse</label><br>
+
+		
+		<input type="checkbox" name="area" id="web">Web<br>
+
+		
+		<input type="checkbox" name="area" id="bd">Banco de Dados<br>
+
+		
+		<input type="checkbox" name="area" id="redes">Redes<br>
+
+		
+		<input type="checkbox" name="area" id="otim">Otimização<br>
+
+		<label for="estado">Estados</label>
+		<select name="cidade">
+			<option value="0">Selecione:</option>
+			<option value="1">Minas Gerais</option>
+			<option value="2">Rio de Janeiro</option>
+			<option value="3">São Paulo</option>
+			<option value="4">Rio Grande do Sul</option>
+			<option value="5">Bahia</option>
+			<option value="6">Espirito Santo</option>
+		</select>
+		<br>
+		<label for="usuario">Usuario</label>
+		<input type="text" name="usuario">
+
+		<label for="senha">Senha</label>
+		<input type="password" name="senha"><br>
+
+		
+
+		<input type="submit" name="Cadastrar">
+		<input type="reset" name="Limpar">
+	</form>
+</body>
+</html>
