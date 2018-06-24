@@ -6,7 +6,7 @@ $estado = new Estados();
 if(isset($_POST['insert'])){
 	$cidade->setNome($_POST['nome']);
 	$cidade->setEstado_id($_POST['estado_id']);
-	
+		
 	if($cidade->insert() == 1){
 		$result = "Cidade inserido com sucesso!";
 	}else{

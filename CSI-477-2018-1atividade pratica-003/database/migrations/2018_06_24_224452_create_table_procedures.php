@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableCidades extends Migration
+class CreateTableProcedures extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateTableCidades extends Migration
      */
     public function up()
     {
-        Schema::create('cidades', function (Blueprint $table) {
+        Schema::create('procedures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome',100);
-            $table->integer('estado_id')->unsigned();
             $table->timestamps();
-            //Relação ->cidade:estado chave estrangeira
-            $table->foreign('estado_id')->references('id')->on('estados');
         });
     }
 
@@ -30,6 +26,6 @@ class CreateTableCidades extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cidades');
+        Schema::dropIfExists('procedures');
     }
 }

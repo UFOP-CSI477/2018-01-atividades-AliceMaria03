@@ -16,6 +16,3 @@ return view('layout/principal');
 /*Route::get('/welcome', function () {
     return view('welcome');
 });*/
-Route::resource('/estados','EstadosController');
-Route::resource('/vendas','VendasController');
-Route::resource('/estados','ProdutosController');
