@@ -12,10 +12,9 @@
 	@endif
 	<!-- Links -->
 <a href="/estados">Estados</a>
-<a href="#">Cidades</a>
-<a href="#">Alunos</a>
-<a href="#">Turmas</a>
-<a href="#">Notas</a>
+<a href="/cidades">Cidades</a>
+<a href="/alunos">Alunos</a>
+
 <!-- Conteúdo -->
 @yield('conteudo')
 </body>

@@ -1,11 +1,11 @@
 @extends ('layout.principal')
 @section('conteudo')
-<h1>Atualizar estado:{{$estado->id}}</h1>
-<form method="post" action="{{route('estados.update',['estado' => $estado->id])}}">
+<h1>Atualizar cidade:{{$cidade->id}}</h1>
+<form method="post" action="{{route('cidades.update',['cidade' => $cidade->id])}}">
 	@csrf
 	@method('PATCH')
-	<p>Nome:<input type="text" name="nome" value="{{$estado->nome}}"></p>
-	<p>Sigla:<input type="text" name="sigla" value="{{$estado->sigla}}"></p>
-	<p>Nome:<input type="submit" name="btnAtualizar" value="Atualizar"></p>
+	<p>Nome:<input type="text" name="nome" value="{{$cidade->nome}}"></p>
+	<p>ID do Estado:<input type="number" name="estado_id" value="{{$cidade->estado_id}}"></p>
+	<p>Atualizar:<input type="submit" name="btnAtualizar" value="Atualizar"></p>
 </form>
 @endsection('conteudo')

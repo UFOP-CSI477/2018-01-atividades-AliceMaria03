@@ -1,10 +1,15 @@
 @extends ('layout.principal')
 @section('conteudo')
-<h1>Inserir estado</h1>
-<form method="post" action="{{route('estados.store')}}">
+<h1>Inserir Alunos</h1>
+<form method="post" action="{{route('alunos.store')}}">
 	@csrf
 	<p>Nome:<input type="text" name="nome"></p>
-	<p>Sigla:<input type="text" name="sigla"></p>
-	<p>Nome:<input type="submit" name="btnIncluir" value="Incluir"></p>
+	<p>Rua:<input type="text" name="rua"></p>
+	<p>Numero:<input type="number" name="numero"></p>
+	<p>Bairro:<input type="text" name="bairro"></p>
+	<p>ID da Cidade:<input type="number" name="cidade_id"></p>
+	<p>CEP:<input type="text" name="cep"></p>
+	<p>Email:<input type="text" name="mail"></p>
+	<p>Incluir:<input type="submit" name="btnIncluir" value="Incluir"></p>
 </form>
 @endsection('conteudo')

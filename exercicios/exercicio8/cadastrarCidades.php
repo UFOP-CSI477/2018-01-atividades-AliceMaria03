@@ -1,6 +1,8 @@
 <?php
 require_once 'assets/php/classes/classCidade.php';
+require_once 'assets/php/classes/classEstado.php';
 $cidade = new Cidades();
+$estado = new Estados();
 if(isset($_POST['insert'])){
 	$cidade->setNome($_POST['nome']);
 	$cidade->setEstado_id($_POST['estado_id']);

@@ -17,5 +17,5 @@ return view('layout/principal');
     return view('welcome');
 });*/
 Route::resource('/estados','EstadosController');
-Route::resource('/vendas','VendasController');
-Route::resource('/estados','ProdutosController');
+Route::resource('/cidades','CidadesController');
+Route::resource('/alunos','AlunosController');

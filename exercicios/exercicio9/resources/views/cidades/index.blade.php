@@ -3,22 +3,22 @@
 <br>
 <!-- URL a partir do nome da rota -->
 
-<a href="{{route('estados.create')}}">Inserir Estado</a>
+<a href="{{route('cidades.create')}}">Inserir Cidade</a>
 	<table>
 		<tr>
 			<th>Código</th>
-			<th>Estado</th>
-			<th>Sigla</th>
+			<th>Nome</th>
+			<th>ID do Estado</th>
 			<th>Ação</th>
 		</tr>
 
 		
-@foreach($estados as $e)
+@foreach($cidades as $c)
 <tr>
-	<td>{{$e->id}}</td>
-	<td>{{$e->nome}}</td>
-	<td>{{$e->sigla}}</td>
-	<td><a href="/estados/{{$e->id}}">Exibir</a></td>
+	<td>{{$c->id}}</td>
+	<td>{{$c->nome}}</td>
+	<td>{{$c->estado_id}}</td>
+	<td><a href="/cidades/{{$c->id}}">Exibir</a></td>
 </tr>
 
 

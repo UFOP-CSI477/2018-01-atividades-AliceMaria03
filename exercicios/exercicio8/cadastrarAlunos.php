@@ -1,6 +1,8 @@
 <?php
 require_once 'assets/php/classes/classAluno.php';
+require_once 'assets/php/classes/classCidade.php';
 $aluno = new Alunos();
+$cidade= new Cidades();
 if(isset($_POST['insert'])){
 	$aluno->setNome($_POST['nome']);
 	$aluno->setRua($_POST['rua']);
