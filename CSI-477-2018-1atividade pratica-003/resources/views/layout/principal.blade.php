@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Sistema Acadêmico</title>
+	<title>Sistema Análises Laboratoriais</title>
 	<link rel="stylesheet" href="{{ asset('./css/app.css')}}">
 </head>
 <body>
@@ -11,11 +11,10 @@
 	<h2>{{Session::get('mensagem')}}</h2>
 	@endif
 	<!-- Links -->
-<a href="/estados">Estados</a>
-<a href="#">Cidades</a>
-<a href="#">Alunos</a>
-<a href="#">Turmas</a>
-<a href="#">Notas</a>
+<a href="/procedures">Procedimentos</a>
+<a href="/users">Users</a>
+<a href="/tests">Tests</a>
+
 <!-- Conteúdo -->
 @yield('conteudo')
 </body>
