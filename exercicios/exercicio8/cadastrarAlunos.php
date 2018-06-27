@@ -8,7 +8,7 @@ if(isset($_POST['insert'])){
 	$aluno->setRua($_POST['rua']);
 	$aluno->setNumero($_POST['numero']);
 	$aluno->setBairro($_POST['bairro']);
-	/*$aluno->setCidades($_POST['id']);*/
+	$aluno->setCidade_id($_POST['cidade_id']);
 	$aluno->setCep($_POST['cep']);
 	$aluno->setMail($_POST['mail']);
 	
@@ -65,15 +65,7 @@ if(isset($_POST['cancel'])){
 						<label>Bairro</label>
 						<input type="text" name="bairro" class="form-control">
 						<label>ID da cidade</label>
-						<select id="select" name="id" action="cadastrarAlunos.php">
-					<option>Selecione</option>
-					<?php 
-						$stmt = $cidade->index();
-						while($row = $stmt->fetch(PDO::FETCH_OBJ)){
-					?>
-					<option id="<?php echo $row->id; ?>" value="<?php echo $row->id; ?>"><?php echo $row->nome ?></option>
-					<?php } ?>
-				</select>
+						<input type="number" name="cidade_id" class="form-control">
 						<label>CEP</label>
 						<input type="text" name="cep" class="form-control">
 						<label>Email</label>
