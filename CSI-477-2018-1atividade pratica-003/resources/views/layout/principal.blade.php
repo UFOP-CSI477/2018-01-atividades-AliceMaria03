@@ -12,8 +12,8 @@
 	@endif
 	<!-- Links -->
 <a href="/procedures">Procedimentos</a>
-<a href="/users">Users</a>
-<a href="/tests">Tests</a>
+<a href="/users">Usuários</a>
+<a href="/tests">Exames</a>
 
 <!-- Conteúdo -->
 @yield('conteudo')

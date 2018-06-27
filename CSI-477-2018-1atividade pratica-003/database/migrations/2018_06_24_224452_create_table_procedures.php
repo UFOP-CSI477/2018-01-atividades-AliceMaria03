@@ -15,6 +15,9 @@ class CreateTableProcedures extends Migration
     {
         Schema::create('procedures', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name',100);
+            $table->double('price');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreateTableTests extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('estado_id')->references('id')->on('estados');
+            $table->foreign('procedure_id')->references('id')->on('procedures');
+            $table->date('date');
             $table->timestamps();
         });
     }
