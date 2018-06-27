@@ -26,9 +26,7 @@ USE `analyses`;
 -- Create user
 -- -----------------------------------------------------
 -- DROP USER `sysanalyses`@`localhost`;
-CREATE USER `sysanalyses`@`localhost` identified by "123456";
-GRANT ALL PRIVILEGES ON analyses.* TO `sysanalyses`@`localhost`;
-FLUSH PRIVILEGES;
+
 
 -- --------------------------------------------------------
 

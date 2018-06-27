@@ -16,3 +16,6 @@ return view('layout/principal');
 /*Route::get('/welcome', function () {
     return view('welcome');
 });*/
+Route::resource('/procedures','ProceduresController');
+Route::resource('/users','UsersController');
+Route::resource('/tests','TestsController');
