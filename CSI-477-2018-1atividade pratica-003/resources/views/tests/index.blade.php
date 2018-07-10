@@ -21,6 +21,7 @@
 	<td>{{$t->procedure_id}}</td>
 	<td>{{$t->date}}</td>
 	<td><a href="/tests/{{$t->id}}">Exibir</a></td>
+	<td><a href="/tests/{{$t->id}}">Editar</a></td>
 </tr>
 
 

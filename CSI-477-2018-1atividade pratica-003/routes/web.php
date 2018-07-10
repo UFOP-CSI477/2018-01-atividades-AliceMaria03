@@ -19,3 +19,5 @@ return view('layout/principal');
 Route::resource('/procedures','ProceduresController');
 Route::resource('/users','UsersController');
 Route::resource('/tests','TestsController');
+Auth::routes();
+Route::get('/home','HomeController@index')->name('home');

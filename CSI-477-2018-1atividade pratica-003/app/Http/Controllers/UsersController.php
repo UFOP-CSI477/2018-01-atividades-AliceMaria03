@@ -11,6 +11,9 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   /* public function __construct(){
+        $this->middleware('auth');
+    }*/
     public function index()
     {
         $users= User::orderBy('name')->get();
@@ -24,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $users= User::orderBy('name')->get();
+       $users= User::orderBy('name')->get();
         return view ('users.create')->with('users',$users);
     }
 
@@ -39,7 +42,7 @@ class UsersController extends Controller
         User::create($request->all());
        
         $request->session()->flash('mensagem','Usuário inserido com sucesso!');
-        return redirect('/alunos');
+        return redirect('/users');
     }
 
     /**

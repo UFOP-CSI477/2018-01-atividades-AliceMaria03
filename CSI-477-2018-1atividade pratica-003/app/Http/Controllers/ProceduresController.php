@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 use App\Procedure;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class ProceduresController extends Controller
 {
+   /* public function __construct(){
+        $this->middleware('auth');
+    }*/
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +27,7 @@ class ProceduresController extends Controller
      */
     public function create()
     {
-        $procedures= Procedure::orderBy('name')->get();
+       $procedures= Procedure::orderBy('name')->get();
         return view ('procedures.create')->with('procedures',$procedures);
     }
 
@@ -50,6 +53,7 @@ class ProceduresController extends Controller
      */
     public function show(Procedure $procedure)
     {
+
         return view('procedures.show')->with('procedure',$procedure);
     }
 
@@ -83,7 +87,7 @@ class ProceduresController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cidade  $cidade
+     * @param  
      * @return \Illuminate\Http\Response
      */
     public function destroy(Procedure $procedure)

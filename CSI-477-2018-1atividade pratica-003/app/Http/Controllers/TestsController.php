@@ -11,6 +11,9 @@ class TestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*public function __construct(){
+        $this->middleware('auth');
+    }*/
     public function index()
     {
         $tests= Test::orderBy('user_id')->get();
@@ -24,7 +27,7 @@ class TestsController extends Controller
      */
     public function create()
     {
-        $tests= Test::orderBy('user_id')->get();
+        $tests= Test::orderBy('date')->get();
         return view ('tests.create')->with('tests',$tests);
     }
 
@@ -61,7 +64,7 @@ class TestsController extends Controller
      */
     public function edit(Test $test)
     {
-        $tests= test::orderBy('user_id')->get();
+        $tests= test::orderBy('id')->get();
         return view('tests.edit')->with('test',$test)->with('tests',$tests);
     }
 

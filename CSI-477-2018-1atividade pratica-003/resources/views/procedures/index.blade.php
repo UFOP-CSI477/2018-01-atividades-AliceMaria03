@@ -21,6 +21,7 @@
 	<td>{{$p->price}}</td>
 	<td>{{$p->user_id}}</td>
 	<td><a href="/procedures/{{$p->id}}">Exibir</a></td>
+	<td><a href="/procedures/{{$p->id}}">Editar</a></td>
 </tr>
 
 
